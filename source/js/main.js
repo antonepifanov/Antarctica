@@ -2,10 +2,12 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initPhoneMask} from './modules/init-phone-mask';
 import {initValidation} from './modules/init-validation';
+import {initMobMenu} from './modules/init-mob-menu';
 
 window.addEventListener('DOMContentLoaded', () => {
   // Utils
   iosVhFix();
+  initMobMenu();
 
   // Modules
   initModals();
