@@ -1,7 +1,11 @@
 .header {
-  background-color: $color-tangaroa;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   padding-top: 35px;
   padding-bottom: 35px;
+  z-index: 20;
 
   @include vp-767 {
     padding-top: 0;
@@ -10,14 +14,11 @@
 
   &--no-js {
     @include vp-767 {
+      position: static;
       background-color: $color-default-white;
 
       .header__logo {
         color: $color-tangaroa;
-      }
-
-      .header__wrapper {
-        padding-bottom: 0;
       }
 
       .header__menu-button {
@@ -28,10 +29,6 @@
 
   &--opened {
     @include vp-767 {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
       bottom: 0;
       min-height: 100vh;
       /* stylelint-disable-next-line */

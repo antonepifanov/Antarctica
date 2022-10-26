@@ -16,7 +16,10 @@
 // Blocks
 // ---------------------------------
 
+@import "blocks/title";
 @import "blocks/header";
+@import "blocks/hero";
+@import "blocks/intro";
 // ---------------------------------
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg
