@@ -1,0 +1,148 @@
+.footer {
+  background-color: $color-tangaroa;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @include vp-1365 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @include vp-1023 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @include vp-767 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.footer__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  @include vp-1023 {
+    gap: 25px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+}
+
+.footer__nav-list {
+  display: flex;
+  align-items: center;
+  gap: 33px;
+
+  @include vp-1023 {
+    gap: 23px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 23px;
+  }
+}
+
+.footer__nav-item {
+  display: flex;
+
+  a {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: $color-alice-blue;
+    transition: opacity $trans-default;
+
+    @include vp-1023 {
+      font-size: 12px;
+      line-height: 1.22;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &:focus-visible {
+        outline: 1px solid $color-default-white;
+        opacity: 0.7;
+      }
+
+      &:active {
+        opacity: 0.4;
+      }
+    }
+  }
+}
+
+.footer__social {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 27px;
+
+  @include vp-1023 {
+    gap: 22px;
+  }
+
+  @include vp-767 {
+    margin-left: unset;
+  }
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  color: $color-alice-blue;
+  transition: opacity $trans-default;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:focus-visible {
+      outline: 1px solid $color-default-white;
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
+  }
+
+  &--ok {
+    @include vp-1023 {
+      svg {
+        width: 10px;
+        height: 16px;
+      }
+    }
+  }
+
+  &--logo2 {
+    @include vp-1023 {
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  &--logo3 {
+    @include vp-1023 {
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}
