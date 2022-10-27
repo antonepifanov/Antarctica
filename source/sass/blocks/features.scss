@@ -1,0 +1,141 @@
+.features {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: $color-solitude;
+  background-image: url("../img/features.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+
+  @include vp-1365 {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  @include vp-1023 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  @include retina {
+    background-image: url("../img/features@2x.jpg");
+  }
+}
+
+.features__inner {
+  h2 {
+    margin-bottom: 60px;
+    text-align: center;
+
+    @include vp-767 {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.features__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
+  @include vp-1023 {
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.features__item {
+  background-color: $color-alice-blue;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  min-height: 241px;
+
+  @include vp-1023 {
+    padding: 26px 16px 25px 20px;
+    min-height: 310px;
+  }
+
+  @include vp-767 {
+    min-height: 249px;
+  }
+
+  &::before {
+    content: "";
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 5px;
+
+    @include vp-1023 {
+      margin-bottom: 4px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 5px;
+    }
+  }
+
+  &--ship {
+    &::before {
+      width: 27px;
+      height: 32px;
+      background-image: url("../img/svg/ship-icon.svg");
+
+      @include vp-1023 {
+        width: 21px;
+        height: 26px;
+      }
+    }
+  }
+
+  &--system {
+    &::before {
+      width: 38px;
+      height: 32px;
+      background-image: url("../img/svg/system-icon.svg");
+
+      @include vp-1023 {
+        width: 27px;
+        height: 26px;
+      }
+    }
+  }
+
+  &--tours {
+    &::before {
+      width: 44px;
+      height: 32px;
+      background-image: url("../img/svg/tours-icon.svg");
+
+      @include vp-1023 {
+        width: 36px;
+        height: 26px;
+      }
+    }
+  }
+
+  b {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+
+    @include vp-1023 {
+      line-height: 1.4;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.43;
+  }
+}

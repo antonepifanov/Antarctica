@@ -39,7 +39,7 @@
         color: $color-tangaroa;
       }
 
-      .header__wrapper {
+      .header__inner {
         position: absolute;
         left: 35px;
         top: 0;
@@ -91,7 +91,7 @@
   }
 }
 
-.header__wrapper {
+.header__inner {
   position: relative;
   display: flex;
   align-items: center;

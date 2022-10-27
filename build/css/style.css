@@ -666,7 +666,7 @@ button,
   box-shadow: 0 6px 0 0 #f9fbfd, 0 -6px 0 0 #f9fbfd;
 }
 
-.header__wrapper {
+.header__inner {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -792,6 +792,80 @@ button,
 .intro__image img {
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+.features {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: #e3ecf6;
+  background-image: url("../img/features.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+}
+
+.features__inner h2 {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.features__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.features__item {
+  background-color: #f9fbfd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  min-height: 241px;
+}
+
+.features__item::before {
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 5px;
+}
+
+.features__item--ship::before {
+  width: 27px;
+  height: 32px;
+  background-image: url("../img/svg/ship-icon.svg");
+}
+
+.features__item--system::before {
+  width: 38px;
+  height: 32px;
+  background-image: url("../img/svg/system-icon.svg");
+}
+
+.features__item--tours::before {
+  width: 44px;
+  height: 32px;
+  background-image: url("../img/svg/tours-icon.svg");
+}
+
+.features__item b {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.features__item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.43;
 }
 
 .footer {
@@ -946,6 +1020,11 @@ button,
     width: calc((100% - 40px) / 2);
   }
 
+  .features {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
   .footer {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -1020,6 +1099,43 @@ button,
     height: 174px;
   }
 
+  .features {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .features__list {
+    gap: 30px;
+  }
+
+  .features__item {
+    padding: 26px 16px 25px 20px;
+    min-height: 310px;
+  }
+
+  .features__item::before {
+    margin-bottom: 4px;
+  }
+
+  .features__item--ship::before {
+    width: 21px;
+    height: 26px;
+  }
+
+  .features__item--system::before {
+    width: 27px;
+    height: 26px;
+  }
+
+  .features__item--tours::before {
+    width: 36px;
+    height: 26px;
+  }
+
+  .features__item b {
+    line-height: 1.4;
+  }
+
   .footer {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -1042,18 +1158,13 @@ button,
     gap: 22px;
   }
 
+  .footer__social svg {
+    width: 16px;
+    height: 16px;
+  }
+
   .footer__social-link--ok svg {
     width: 10px;
-    height: 16px;
-  }
-
-  .footer__social-link--logo2 svg {
-    width: 16px;
-    height: 16px;
-  }
-
-  .footer__social-link--logo3 svg {
-    width: 16px;
     height: 16px;
   }
 }
@@ -1110,7 +1221,7 @@ button,
     color: #011c40;
   }
 
-  .header--opened .header__wrapper {
+  .header--opened .header__inner {
     position: absolute;
     left: 35px;
     top: 0;
@@ -1141,7 +1252,7 @@ button,
     transform: translateY(-50%) rotate(315deg);
   }
 
-  .header__wrapper {
+  .header__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1253,6 +1364,28 @@ button,
     height: auto;
   }
 
+  .features {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  .features__inner h2 {
+    margin-bottom: 40px;
+  }
+
+  .features__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .features__item {
+    min-height: 249px;
+  }
+
+  .features__item::before {
+    margin-bottom: 5px;
+  }
+
   .footer {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -1308,5 +1441,9 @@ button,
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .hero {
     background-image: url("../img/hero@2x.jpg");
+  }
+
+  .features {
+    background-image: url("../img/features@2x.jpg");
   }
 }
