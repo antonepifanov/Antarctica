@@ -1,0 +1,38 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  color: $color-tangaroa;
+  font-family: $ff-placeholder;
+  font-weight: 600;
+  line-height: 1;
+  background-color: $color-alice-blue;
+  border: 1px solid $color-transparent;
+  user-select: none;
+  cursor: pointer;
+  transition: color $trans-default, border-color $trans-default, background-color $trans-default, opacity $trans-default;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover {
+      background-color: $color-tangaroa;
+      border: 1px solid $color-alice-blue;
+      color: $color-alice-blue;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-tangaroa;
+      background-color: $color-tangaroa;
+      border: 1px solid $color-alice-blue;
+      color: $color-alice-blue;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
+  }
+}
+
