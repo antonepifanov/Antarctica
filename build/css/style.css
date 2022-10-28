@@ -654,6 +654,7 @@ button,
   width: 100%;
   color: #011c40;
   font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1;
   background-color: #f9fbfd;
@@ -1042,6 +1043,224 @@ button,
   min-height: 40px;
 }
 
+.form {
+  background-color: #011c40;
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form p {
+  margin: 0;
+  margin-bottom: 5px;
+  color: #f9fbfd;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.form__fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.form__field input {
+  width: 100%;
+  height: 43px;
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  background-color: #f9fbfd;
+  font-size: 14px;
+  line-height: 1;
+  color: #011c40;
+  -webkit-transition: border-color 0.3s ease;
+  -o-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
+}
+
+.form__field input:focus-visible {
+  outline: 1px groove #f9fbfd;
+  border: 1px solid #011c40;
+}
+
+.form__field input:focus-visible::-webkit-input-placeholder {
+  font-size: 0;
+}
+
+.form__field input:focus-visible::-moz-placeholder {
+  font-size: 0;
+}
+
+.form__field input:focus-visible:-ms-input-placeholder {
+  font-size: 0;
+}
+
+.form__field input:focus-visible::-ms-input-placeholder {
+  font-size: 0;
+}
+
+.form__field input:focus-visible::placeholder {
+  font-size: 0;
+}
+
+.form__field input::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 1;
+  color: rgba(1, 28, 64, 0.7);
+  -webkit-transition: font-size 0.3s ease;
+  -o-transition: font-size 0.3s ease;
+  transition: font-size 0.3s ease;
+}
+
+.form__field input::-moz-placeholder {
+  font-size: 14px;
+  line-height: 1;
+  color: rgba(1, 28, 64, 0.7);
+  -webkit-transition: font-size 0.3s ease;
+  -o-transition: font-size 0.3s ease;
+  transition: font-size 0.3s ease;
+}
+
+.form__field input:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 1;
+  color: rgba(1, 28, 64, 0.7);
+  -webkit-transition: font-size 0.3s ease;
+  -o-transition: font-size 0.3s ease;
+  transition: font-size 0.3s ease;
+}
+
+.form__field input::-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 1;
+  color: rgba(1, 28, 64, 0.7);
+  -webkit-transition: font-size 0.3s ease;
+  -o-transition: font-size 0.3s ease;
+  transition: font-size 0.3s ease;
+}
+
+.form__field input::placeholder {
+  font-size: 14px;
+  line-height: 1;
+  color: rgba(1, 28, 64, 0.7);
+  -webkit-transition: font-size 0.3s ease;
+  -o-transition: font-size 0.3s ease;
+  transition: font-size 0.3s ease;
+}
+
+.form__checkbox input:checked + label::after {
+  position: absolute;
+  content: "";
+  left: 6px;
+  top: 50%;
+  -webkit-transform: translateY(calc(-50% - 1px)) rotate(45deg);
+  -ms-transform: translateY(calc(-50% - 1px)) rotate(45deg);
+  transform: translateY(calc(-50% - 1px)) rotate(45deg);
+  width: 6px;
+  height: 8px;
+  border-right: 1px solid #101a56;
+  border-bottom: 1px solid #101a56;
+}
+
+.form__checkbox input:focus-visible + label::before {
+  outline: 1px groove #f9fbfd;
+  border: 1px solid #011c40;
+}
+
+.form__checkbox label {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  line-height: 1.3;
+  color: #f9fbfd;
+  cursor: pointer;
+}
+
+.form__checkbox label::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-color: #f9fbfd;
+  border: 1px solid rgba(255, 255, 255, 0);
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: border 0.3s ease;
+  -o-transition: border 0.3s ease;
+  transition: border 0.3s ease;
+}
+
+.form__checkbox label:active {
+  opacity: 0.6;
+}
+
+.booking {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #e3ecf6;
+  background-image: url("../img/booking.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+}
+
+.booking__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 144px;
+}
+
+.booking__intro h2 {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+  color: #011c40;
+}
+
+.booking__intro p {
+  margin: 0;
+  max-width: 352px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.booking__form {
+  max-width: 403px;
+}
+
 .footer {
   background-color: #011c40;
   padding-top: 50px;
@@ -1123,7 +1342,7 @@ button,
   }
 
   .button:focus-visible {
-    outline: 2px solid #011c40;
+    outline: 2px solid #f9fbfd;
     background-color: #011c40;
     border: 1px solid #f9fbfd;
     color: #f9fbfd;
@@ -1171,6 +1390,14 @@ button,
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .form__field input:hover {
+    border: 1px solid #011c40;
+  }
+
+  .form__checkbox label:hover::before {
+    border: 1px solid #011c40;
   }
 
   .footer__nav-item a:hover {
@@ -1237,6 +1464,15 @@ button,
 
   .tours__list {
     gap: 15px;
+  }
+
+  .booking {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .booking__inner {
+    gap: 100px;
   }
 
   .footer {
@@ -1363,6 +1599,41 @@ button,
 
   .tour {
     padding: 35px;
+  }
+
+  .booking {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .booking__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .booking__intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .booking__intro h2 {
+    font-size: 34px;
+    margin-bottom: 25px;
+  }
+
+  .booking__intro p {
+    text-align: center;
   }
 
   .footer {
@@ -1633,6 +1904,48 @@ button,
     padding: 25px;
   }
 
+  .form {
+    padding: 40px 30px;
+  }
+
+  .form p {
+    text-align: center;
+  }
+
+  .form__checkbox input:checked + label::after {
+    left: 7px;
+  }
+
+  .form__checkbox label {
+    gap: 8px;
+    max-width: 175px;
+  }
+
+  .form__checkbox label::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .booking {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  .booking__inner {
+    gap: 40px;
+  }
+
+  .booking__intro h2 {
+    font-size: 24px;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .booking__intro p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
   .footer {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -1704,5 +2017,9 @@ button,
 
   .features {
     background-image: url("../img/features@2x.jpg");
+  }
+
+  .booking {
+    background-image: url("../img/booking@2x.jpg");
   }
 }

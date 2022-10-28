@@ -8,6 +8,7 @@
   width: 100%;
   color: $color-tangaroa;
   font-family: $ff-placeholder;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1;
   background-color: $color-alice-blue;
@@ -24,7 +25,7 @@
     }
 
     &:focus-visible {
-      outline: 2px solid $color-tangaroa;
+      outline: 2px solid $color-alice-blue;
       background-color: $color-tangaroa;
       border: 1px solid $color-alice-blue;
       color: $color-alice-blue;
@@ -35,4 +36,3 @@
     }
   }
 }
-

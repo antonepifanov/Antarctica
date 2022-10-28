@@ -42,7 +42,7 @@
               </li>
 
               <li class="header__nav-item">
-                <a href="#">Контакты</a>
+                <a href="#contacts">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -435,6 +435,44 @@
               </div>
             </li>
           </ul>
+        </section>
+
+        <section class="booking">
+          <div class="booking__inner container">
+            <div class="booking__intro">
+              <h2>Раннее бронирование</h2>
+
+              <p>Забронируйте тур за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
+            </div>
+
+            <form class="booking__form form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off">
+              <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</p>
+
+              <ul class="form__fields list">
+                <li class="form__field">
+                  <label class="visually-hidden" for="name">Введите Ваше имя</label>
+                  <input type="text" id="name" name="name" placeholder="Имя" required>
+                </li>
+
+                <li class="form__field">
+                  <label class="visually-hidden" for="tel">Введите Ваш телефон</label>
+                  <input type="tel" id="tel" name="tel" placeholder="Телефон" minlength="17" maxlength="17" required>
+                </li>
+
+                <li class="form__field">
+                  <label class="visually-hidden" for="email">Введите Ваш email</label>
+                  <input type="email" id="email" name="email" placeholder="Email" required>
+                </li>
+
+                <li class="form__checkbox">
+                  <input class="visually-hidden" type="checkbox" id="accept" name="accept" checked required>
+                  <label for="accept">Я&nbsp;согласен на&nbsp;обработку моих персональных данных</label>
+                </li>
+              </ul>
+
+              <button class="button" type="submit">Оставить заявку</button>
+            </form>
+          </div>
         </section>
       </main>
 
