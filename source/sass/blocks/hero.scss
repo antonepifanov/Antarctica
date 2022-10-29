@@ -1,7 +1,7 @@
 .hero {
   min-height: 638px;
-  padding-top: 283px;
-  padding-bottom: 283px;
+  padding-top: 270px;
+  padding-bottom: 279px;
   background-color: $color-tangaroa;
   background-image: url("../img/hero.jpg");
   background-repeat: no-repeat;
@@ -10,21 +10,21 @@
   box-shadow: 0 4px 4px rgba($color-default-black, 0.25);
 
   @include vp-1365 {
-    padding-top: 283px;
-    padding-bottom: 283px;
+    padding-top: 270px;
+    padding-bottom: 279px;
   }
 
   @include vp-1023 {
-    padding-top: 280px;
-    padding-bottom: 280px;
+    padding-top: 270px;
+    padding-bottom: 277px;
     box-shadow: none;
     background-position: 60% bottom;
   }
 
   @include vp-767 {
     min-height: 500px;
-    padding-top: 185px;
-    padding-bottom: 185px;
+    padding-top: 175px;
+    padding-bottom: 175px;
     background-position: 35%;
   }
 
@@ -51,7 +51,7 @@
     font-weight: 700;
     line-height: 1.23;
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 
     @include vp-1023 {
       font-size: 50px;
@@ -61,7 +61,7 @@
     @include vp-767 {
       font-size: 36px;
       line-height: 1.25;
-      margin-bottom: 25px;
+      margin-bottom: 13px;
     }
   }
 

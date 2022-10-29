@@ -1,5 +1,4 @@
-/* eslint-disable no-undef */
-import '../vendor/ymaps';
+import ymaps from '../vendor/ymaps';
 
 export const initMap = () => {
   const map = document.querySelector('#map');
@@ -9,25 +8,26 @@ export const initMap = () => {
 
   const coordinates = map.dataset.coordinates.split(',');
   const centerCoordinates = map.dataset.center.split(',');
-  ymaps.ready(init);
-  function init() {
-    let myMap = new ymaps.Map('map', {
-      center: centerCoordinates,
-      zoom: 15,
-    });
 
-    let myPlacemark = new ymaps.Placemark(coordinates, {
-      hintContent: '',
-    },
+  ymaps.load()
+      .then((maps) => {
+        const myMap = new maps.Map('map', {
+          center: centerCoordinates,
+          zoom: 16,
+        });
 
-    {
-      iconLayout: 'default#image',
-      iconImageHref: './img/svg/pin-icon.svg',
-      iconImageSize: [18, 22],
-      iconImageOffset: [0, -10],
-    });
+        const myPlacemark = new maps.Placemark(coordinates, {
+          hintContent: '',
+        },
 
-    myMap.geoObjects.add(myPlacemark);
-    myMap.behaviors.disable('scrollZoom');
-  }
+        {
+          iconLayout: 'default#image',
+          iconImageHref: './img/svg/pin-icon.svg',
+          iconImageSize: [18, 22],
+          iconImageOffset: [0, -10],
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+        myMap.behaviors.disable('scrollZoom');
+      });
 };

@@ -1,6 +1,6 @@
 .contacts {
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 121px;
   display: flex;
   align-items: center;
   gap: 100px;
@@ -18,17 +18,17 @@
   }
 
   @include vp-767 {
-    padding-top: 65px;
+    padding-top: 60px;
     padding-bottom: 65px;
     flex-direction: column-reverse;
-    gap: 40px;
+    gap: 35px;
   }
 }
 
 .contacts__map {
   position: relative;
   flex-shrink: 0;
-  max-width: calc((100% - 100px) / 2);
+  max-width: 560px;
 
   @include vp-1365 {
     max-width: calc((100% - 50px) / 2);
@@ -84,10 +84,11 @@
     font-size: 18px;
     font-weight: 500;
     line-height: 1.5;
-    margin-bottom: 45px;
+    margin: 0;
+    margin-bottom: 36px;
 
     @include vp-1023 {
-      margin-bottom: 40px;
+      margin-bottom: 24px;
     }
   }
 
@@ -98,21 +99,27 @@
     font-size: 16px;
     font-style: normal;
     line-height: 1.5;
-    margin-bottom: 25px;
+    margin-bottom: 17px;
 
     @include vp-1023 {
       align-items: flex-start;
-      margin-bottom: 30px;
+      margin-bottom: 23px;
     }
 
     &::before {
+      position: relative;
       content: "";
+      top: -3px;
       width: 18px;
       height: 22px;
       background-image: url("../img/svg/pin-icon.svg");
       background-repeat: no-repeat;
       background-size: contain;
       flex-shrink: 0;
+
+      @include vp-1023 {
+        top: 5px;
+      }
     }
   }
 

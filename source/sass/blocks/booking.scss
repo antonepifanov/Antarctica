@@ -13,12 +13,12 @@
   }
 
   @include vp-1023 {
-    padding-top: 100px;
+    padding-top: 97px;
     padding-bottom: 100px;
   }
 
   @include vp-767 {
-    padding-top: 65px;
+    padding-top: 60px;
     padding-bottom: 65px;
   }
 
@@ -39,11 +39,11 @@
 
   @include vp-1023 {
     flex-direction: column;
-    gap: 60px;
+    gap: 50px;
   }
 
   @include vp-767 {
-    gap: 40px;
+    gap: 32px;
   }
 }
 
@@ -56,7 +56,7 @@
 
   h2 {
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 40px;
     font-weight: 700;
     line-height: 1;
@@ -64,13 +64,14 @@
 
     @include vp-1023 {
       font-size: 34px;
-      margin-bottom: 25px;
+      margin-bottom: 15px;
     }
 
     @include vp-767 {
       font-size: 24px;
       line-height: 1.3;
       text-align: center;
+      margin-bottom: 14px;
     }
   }
 
@@ -93,4 +94,9 @@
 
 .booking__form {
   max-width: 403px;
+  min-height: 455px;
+
+  @include vp-767 {
+    min-height: 460px;
+  }
 }

@@ -6,7 +6,7 @@
 
   flex-direction: column;
   justify-content: space-between;
-  gap: 25px;
+  gap: 20px;
 
   @include vp-1023 {
     padding: 35px;
@@ -78,8 +78,7 @@
 
 .tour__info {
   flex-direction: column;
-  justify-content: space-between;
-  gap: 20px;
+  gap: 25px;
   z-index: 10;
   flex-grow: 1;
   display: none;
@@ -89,14 +88,20 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  flex-grow: 1;
+  gap: 15px;
+  max-height: 208px;
+  overflow: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .tour__description-item {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
   font-size: 14px;
   line-height: 1;
   color: $color-alice-blue;
@@ -108,7 +113,7 @@
   dd {
     margin: 0;
     color: $color-quartz;
-    line-height: 1.43;
+    line-height: 1.4;
   }
 }
 

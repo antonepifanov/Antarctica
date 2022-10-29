@@ -7,6 +7,10 @@
   padding-bottom: 35px;
   z-index: 20;
 
+  @include vp-1023 {
+    padding-top: 34px;
+  }
+
   @include vp-767 {
     padding-top: 0;
     padding-bottom: 0;
@@ -96,6 +100,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 30px;
 
   @include vp-767 {
     flex-direction: column;
@@ -115,6 +120,7 @@
   display: flex;
   align-items: center;
   gap: 33px;
+  flex-wrap: wrap;
 
   @include vp-1023 {
     gap: 23px;
