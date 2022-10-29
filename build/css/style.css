@@ -812,12 +812,8 @@ button,
   flex-shrink: 0;
   width: calc((100% - 88px) / 2);
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  display: -ms-grid;
+  display: grid;
 }
 
 .intro__image img {
@@ -960,6 +956,20 @@ button,
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+}
+
+.tour:hover {
+  padding: 35px 25px;
+}
+
+.tour:hover::before {
+  opacity: 1;
+}
+
+.tour:hover .tour__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .tour__image {
@@ -1261,6 +1271,110 @@ button,
   max-width: 403px;
 }
 
+.contacts {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.contacts__map {
+  position: relative;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  max-width: calc((100% - 100px) / 2);
+}
+
+.contacts__map-picture {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.contacts__map-picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.contacts__map-interactive {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  width: 100%;
+  height: 306px;
+}
+
+.contacts__info p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 45px;
+}
+
+.contacts__info address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.contacts__info address::before {
+  content: "";
+  width: 18px;
+  height: 22px;
+  background-image: url("../img/svg/pin-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.contacts__info a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.contacts__info a::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/svg/tel-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
 .footer {
   background-color: #011c40;
   padding-top: 50px;
@@ -1378,26 +1492,25 @@ button,
     opacity: 0.4;
   }
 
-  .tour:hover {
-    padding: 35px 25px;
-  }
-
-  .tour:hover::before {
-    opacity: 1;
-  }
-
-  .tour:hover .tour__info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-
   .form__field input:hover {
     border: 1px solid #011c40;
   }
 
   .form__checkbox label:hover::before {
     border: 1px solid #011c40;
+  }
+
+  .contacts__info a:hover {
+    opacity: 0.7;
+  }
+
+  .contacts__info a:focus-visible {
+    outline: 2px solid #011c40;
+    opacity: 0.7;
+  }
+
+  .contacts__info a:active {
+    opacity: 0.4;
   }
 
   .footer__nav-item a:hover {
@@ -1473,6 +1586,16 @@ button,
 
   .booking__inner {
     gap: 100px;
+  }
+
+  .contacts {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    gap: 50px;
+  }
+
+  .contacts__map {
+    max-width: calc((100% - 50px) / 2);
   }
 
   .footer {
@@ -1601,6 +1724,10 @@ button,
     padding: 35px;
   }
 
+  .tour:hover {
+    padding: 35px;
+  }
+
   .booking {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -1634,6 +1761,32 @@ button,
 
   .booking__intro p {
     text-align: center;
+  }
+
+  .contacts {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    gap: 30px;
+  }
+
+  .contacts__map {
+    max-width: calc((100% - 30px) / 2);
+    height: 335px;
+  }
+
+  .contacts__map-interactive {
+    height: 335px;
+  }
+
+  .contacts__info p {
+    margin-bottom: 40px;
+  }
+
+  .contacts__info address {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-bottom: 30px;
   }
 
   .footer {
@@ -1904,6 +2057,10 @@ button,
     padding: 25px;
   }
 
+  .tour:hover {
+    padding: 35px 25px;
+  }
+
   .form {
     padding: 40px 30px;
   }
@@ -1944,6 +2101,26 @@ button,
   .booking__intro p {
     font-size: 16px;
     line-height: 1.4;
+  }
+
+  .contacts {
+    padding-top: 65px;
+    padding-bottom: 65px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+
+  .contacts__map {
+    max-width: 100%;
+    width: 100%;
+    height: 316px;
+  }
+
+  .contacts__map-interactive {
+    height: 316px;
   }
 
   .footer {
@@ -1995,18 +2172,6 @@ button,
 
   .header__nav-item a:active {
     opacity: 0.4;
-  }
-}
-
-@media (hover: hover) and (max-width: 1023px), screen and (min-width: 0\0) and (max-width: 1023px) {
-  .tour:hover {
-    padding: 35px;
-  }
-}
-
-@media (hover: hover) and (max-width: 767px), screen and (min-width: 0\0) and (max-width: 767px) {
-  .tour:hover {
-    padding: 35px 25px;
   }
 }
 

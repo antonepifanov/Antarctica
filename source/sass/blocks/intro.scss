@@ -48,8 +48,7 @@
   flex-shrink: 0;
   width: calc((100% - 88px) / 2);
   margin: 0;
-  display: flex;
-  justify-content: center;
+  display: grid;
 
   @include vp-1365 {
     width: calc((100% - 40px) / 2);
