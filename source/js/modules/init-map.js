@@ -22,7 +22,7 @@ export const initMap = () => {
 
         {
           iconLayout: 'default#image',
-          iconImageHref: './img/svg/pin-icon.svg',
+          iconImageHref: './../img/svg/pin-icon.svg',
           iconImageSize: [18, 22],
           iconImageOffset: [0, -10],
         });

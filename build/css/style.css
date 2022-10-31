@@ -1122,68 +1122,93 @@ button,
 }
 
 .form__field input:focus-visible::-webkit-input-placeholder {
-  font-size: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
 }
 
 .form__field input:focus-visible::-moz-placeholder {
-  font-size: 0;
+  transform: scale(0);
 }
 
 .form__field input:focus-visible:-ms-input-placeholder {
-  font-size: 0;
+  -ms-transform: scale(0);
+  transform: scale(0);
 }
 
 .form__field input:focus-visible::-ms-input-placeholder {
-  font-size: 0;
+  -ms-transform: scale(0);
+  transform: scale(0);
 }
 
 .form__field input:focus-visible::placeholder {
-  font-size: 0;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
 }
 
 .form__field input::-webkit-input-placeholder {
   font-size: 14px;
   line-height: 1;
   color: rgba(1, 28, 64, 0.7);
-  -webkit-transition: font-size 0.3s ease;
-  -o-transition: font-size 0.3s ease;
-  transition: font-size 0.3s ease;
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .form__field input::-moz-placeholder {
   font-size: 14px;
   line-height: 1;
   color: rgba(1, 28, 64, 0.7);
-  -webkit-transition: font-size 0.3s ease;
-  -o-transition: font-size 0.3s ease;
-  transition: font-size 0.3s ease;
+  transform-origin: left center;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .form__field input:-ms-input-placeholder {
   font-size: 14px;
   line-height: 1;
   color: rgba(1, 28, 64, 0.7);
-  -webkit-transition: font-size 0.3s ease;
-  -o-transition: font-size 0.3s ease;
-  transition: font-size 0.3s ease;
+  -ms-transform-origin: left center;
+  transform-origin: left center;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .form__field input::-ms-input-placeholder {
   font-size: 14px;
   line-height: 1;
   color: rgba(1, 28, 64, 0.7);
-  -webkit-transition: font-size 0.3s ease;
-  -o-transition: font-size 0.3s ease;
-  transition: font-size 0.3s ease;
+  -ms-transform-origin: left center;
+  transform-origin: left center;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .form__field input::placeholder {
   font-size: 14px;
   line-height: 1;
   color: rgba(1, 28, 64, 0.7);
-  -webkit-transition: font-size 0.3s ease;
-  -o-transition: font-size 0.3s ease;
-  transition: font-size 0.3s ease;
+  -webkit-transform-origin: left center;
+  -ms-transform-origin: left center;
+  transform-origin: left center;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .form__checkbox input:checked + label::after {
