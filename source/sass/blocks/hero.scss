@@ -8,6 +8,7 @@
   background-size: cover;
   background-position: left center;
   box-shadow: 0 4px 4px rgba($color-default-black, 0.25);
+  overflow: hidden;
 
   @include vp-1365 {
     padding-top: 270px;
@@ -25,7 +26,8 @@
     min-height: 500px;
     padding-top: 175px;
     padding-bottom: 175px;
-    background-position: 35%;
+    background-position: 46% 30%;
+    background-size: auto 125%;
   }
 
   @include retina {

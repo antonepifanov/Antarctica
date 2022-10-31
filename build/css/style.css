@@ -761,6 +761,7 @@ button,
   background-position: left center;
   -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
 }
 
 .hero__inner {
@@ -822,6 +823,7 @@ button,
 .intro__image img {
   -o-object-fit: cover;
   object-fit: cover;
+  background-color: #011c40;
 }
 
 .features {
@@ -984,8 +986,7 @@ button,
   right: 0;
   bottom: 0;
   width: 100%;
-  display: -ms-grid;
-  display: grid;
+  display: block;
   margin: 0;
 }
 
@@ -994,6 +995,7 @@ button,
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  background-color: #011c40;
 }
 
 .tour__info {
@@ -1266,6 +1268,7 @@ button,
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: #e3ecf6;
+  background-color: #f9fbfd;
   background-image: url("../img/booking.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1339,6 +1342,7 @@ button,
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  background-color: #f9fbfd;
 }
 
 .contacts__map-interactive {
@@ -2051,7 +2055,8 @@ button,
     min-height: 500px;
     padding-top: 175px;
     padding-bottom: 175px;
-    background-position: 35%;
+    background-position: 46% 30%;
+    background-size: auto 125%;
   }
 
   .hero__inner h1 {
