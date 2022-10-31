@@ -5,19 +5,32 @@ export const initMobMenu = () => {
   const navLinks = header.querySelectorAll('.header__nav-item a');
   let isMenuOpen = true;
 
+  const onMenuOverlayClick = (evt) => {
+    if (!evt.target.closest('.header__inner')) {
+      hideMenu();
+    }
+  };
+
   const openMenu = () => {
     header.classList.remove('header--closed');
     header.classList.add('header--opened');
     isMenuOpen = true;
-    navLinks.forEach((link) => {
-      link.addEventListener('click', hideMenu);
-    });
+    if (window.innerWidth < TABLET_WIDTH) {
+      navLinks.forEach((link) => {
+        link.addEventListener('click', hideMenu);
+      });
+
+      setTimeout(() => {
+        header.addEventListener('click', onMenuOverlayClick);
+      }, 500);
+    }
   };
 
   const hideMenu = () => {
     header.classList.add('header--closed');
     header.classList.remove('header--opened');
     isMenuOpen = false;
+    header.removeEventListener('click', onMenuOverlayClick);
   };
 
   header.classList.remove('header--no-js');
