@@ -42,6 +42,9 @@ export const initMobMenu = () => {
   window.addEventListener('resize', () => {
     if (window.innerWidth >= TABLET_WIDTH) {
       openMenu();
+      navLinks.forEach((link) => {
+        link.removeEventListener('click', hideMenu);
+      });
     } else {
       hideMenu();
     }
