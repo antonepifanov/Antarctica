@@ -868,6 +868,8 @@ button,
   background-size: contain;
   background-repeat: no-repeat;
   margin-bottom: 5px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .features__item--ship::before {
@@ -1268,7 +1270,6 @@ button,
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: #e3ecf6;
-  background-color: #f9fbfd;
   background-image: url("../img/booking.jpg");
   background-repeat: no-repeat;
   background-size: cover;

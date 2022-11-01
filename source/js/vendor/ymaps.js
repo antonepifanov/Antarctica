@@ -23,6 +23,7 @@ var ymaps$1 = {
         }
 
         return new Promise(function (resolve) {
+          console.log(ymaps.ready(resolve))
           return ymaps.ready(resolve);
         });
       });
@@ -31,5 +32,5 @@ var ymaps$1 = {
     return this.promise;
   }
 };
-
+console.log(ymaps$1)
 export default ymaps$1;
