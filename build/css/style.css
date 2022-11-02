@@ -1502,9 +1502,6 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -ms-flex-wrap: wrap;
@@ -1700,11 +1697,13 @@ button,
   }
 
   .tours__list {
-    justify-items: center;
+    -ms-grid-columns: (minmax(calc((100% - 90px) / 4), 1fr))[4];
+    grid-template-columns: repeat(4, minmax(calc((100% - 90px) / 4), 1fr));
   }
 
   .tour {
-    max-width: 207px;
+    aspect-ratio: 270  / 386;
+    min-height: unset;
   }
 
   .booking {
@@ -1866,12 +1865,13 @@ button,
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    justify-items: unset;
   }
 
   .tour {
+    min-height: 386px;
     padding: 35px;
     max-width: unset;
+    aspect-ratio: unset;
   }
 
   .tour:hover {
@@ -2242,6 +2242,7 @@ button,
   }
 
   .tour {
+    aspect-ratio: 270  / 386;
     padding: 25px;
   }
 
