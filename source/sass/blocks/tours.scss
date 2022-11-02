@@ -45,12 +45,13 @@
   gap: 30px;
 
   @include vp-1365 {
-    gap: 15px;
+    justify-items: center;
   }
 
   @include vp-1023 {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+    justify-items: unset;
   }
 
   @include vp-767 {

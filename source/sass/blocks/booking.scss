@@ -93,8 +93,13 @@
 }
 
 .booking__form {
+  align-self: flex-start;
   max-width: 403px;
   min-height: 455px;
+
+  @include vp-1023 {
+    align-self: center;
+  }
 
   @include vp-767 {
     min-height: 460px;

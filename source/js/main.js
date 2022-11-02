@@ -2,7 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initPhoneMask} from './modules/init-phone-mask';
 import {initValidation} from './modules/init-validation';
 import {initMobMenu} from './modules/init-mob-menu';
-import {initMap} from './modules/init-map';
+import {initMap} from './vendor/ymaps';
 
 
 window.addEventListener('DOMContentLoaded', () => {
